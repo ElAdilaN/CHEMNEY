@@ -1,0 +1,14 @@
+/* Tailwind custom classes for white shadow */
+.hover\:shadow-white:hover {
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3),
+    0 1px 3px rgba(255, 255, 255, 0.1);
+}
+/* 
+.sect1 {
+  background-image: url("/bg.webp") ;
+
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right;
+}
+ */

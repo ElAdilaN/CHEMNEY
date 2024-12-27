@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+AU+VIC+Guides&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-col1 text-lg font-bold;
+    /* font-family: "Playwrite AU VIC Guides", serif; */
+  }
+  body {
+    font-family: "Urbanist", sans-serif;
+  }
+}
