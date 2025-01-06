@@ -1,13 +1,73 @@
-<section class="sect1 min-h-screen">
+<!-- <nav class="bg-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <div class="text-2xl font-bold text-gray-800">Brand</div>
+
+      <button
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen"
+        [attr.aria-controls]="'mobile-menu'"
+        class="block md:hidden focus:outline-none"
+      >
+        <div class="space-y-1.5">
+          <span
+            class="block w-8 h-1 bg-gray-800 transition-transform duration-300 origin-center"
+            [class.rotate-45]="isMenuOpen"
+            [class.translate-y-2]="isMenuOpen"
+          ></span>
+          <span
+            class="block w-8 h-1 bg-gray-800 transition-opacity duration-300"
+            [class.opacity-0]="isMenuOpen"
+          ></span>
+          <span
+            class="block w-8 h-1 bg-gray-800 transition-transform duration-300 origin-center"
+            [class.-rotate-45]="isMenuOpen"
+            [class.-translate-y-2]="isMenuOpen"
+          ></span>
+        </div>
+      </button>
+
+      <div class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-800 hover:text-gray-500">Home</a>
+        <a href="#" class="text-gray-800 hover:text-gray-500">About</a>
+        <a href="#" class="text-gray-800 hover:text-gray-500">Services</a>
+        <a href="#" class="text-gray-800 hover:text-gray-500">Contact</a>
+      </div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="md:hidden"
+      [class.hidden]="!isMenuOpen"
+      [class.flex]="isMenuOpen"
+    >
+      <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-200"
+        >Home</a
+      >
+      <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-200"
+        >About</a
+      >
+      <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-200"
+        >Services</a
+      >
+      <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-200"
+        >Contact</a
+      >
+    </div>
+  </div>
+</nav>
+ -->
+<!-- 
+ <section class="sect1 min-h-screen">
   <nav class="flex items-center sm:mx-12 mx-2 justify-between p-4 text-white">
-    <!-- Logo Section -->
     <div class="flex-shrink-0">
       <img src="zaza_logo.webp" alt="Logo" class="h-auto w-14" />
     </div>
 
-    <!-- Navigation Section -->
-    <div class="hidden ml:flex space-x-6">
-      <a href="#home" class="tracking-wide font-thin hover:text-gray-400"
+    <div
+      class="flex flex-col absolute ml:relative ml:flex ml:flex-row space-x-6"
+    >
+      <a href="#home" class="pl-6 tracking-wide font-thin hover:text-gray-400"
         >HOME</a
       >
       <a href="#products" class="tracking-wide font-thin hover:text-gray-400"
@@ -21,7 +81,6 @@
       </a>
     </div>
 
-    <!-- Request a Quote Section -->
     <div>
       <a
         href="#quote"
@@ -53,7 +112,69 @@
       >
         EXPLORE OUR PRODUCTS
         <span class="ml-2 font-bold">&rarr;</span>
-        <!-- Right arrow -->
+      </button>
+    </div>
+  </section>
+</section> -->
+
+<section class="sect1 min-h-screen">
+  <nav class="flex items-center sm:mx-12 mx-2 justify-between p-4 text-white">
+    <div class="flex-shrink-0">
+      <img src="zaza_logo.webp" alt="Logo" class="h-auto w-14" />
+    </div>
+
+    <div class="hidden ml:flex space-x-6">
+      <a href="#home" class="tracking-wide font-thin hover:text-gray-400"
+        >HOME</a
+      >
+      <a href="#products" class="tracking-wide font-thin hover:text-gray-400"
+        >OUR PRODUCTS</a
+      >
+      <a href="#aboutus" class="tracking-wide font-thin hover:text-gray-400"
+        >ABOUT US
+      </a>
+      <a href="#contact" class="tracking-wide font-thin hover:text-gray-400"
+        >CONTACT
+      </a>
+    </div>
+    <div class="flex space-x-6">
+      <div>
+        <a
+          href="#quote"
+          class="text-white px-2 py-3 text-sm sm:px-4 sm:text-base md:text-lg lg:text-xl font-bold border hover:bg-col2 hover:text-black hover:border-col2 transform transition duration-300 ease-in-out shadow-lg hover:shadow-white"
+        >
+          REQUEST A QUOTE
+        </a>
+      </div>
+      <div class="flex ml:hidden hamburger" (click)="toggleActive()">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="mx-10 ml:mx-20 my-10 w-[70vw] h-[70vh] bg-slate-500">
+    <h1
+      class="px-3 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+    >
+      Your dream fireplace,<br />
+      made by experts.
+    </h1>
+
+    <p
+      class="p-4 sm:px-6 md:px-8 lg:px-12 font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+    >
+      Entrust your project to our team of professionals <br />
+      for a perfect installation
+    </p>
+
+    <div class="px-2 sm:px-4 md:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 lg:pt-10">
+      <button
+        class="flex tracking-wide items-center bg-col2 text-white px-3 sm:px-4 md:px-6 lg:px-8 py-1 sm:py-2 md:py-3 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-col2-dark transition duration-300"
+      >
+        EXPLORE OUR PRODUCTS
+        <span class="ml-2 font-bold">&rarr;</span>
       </button>
     </div>
   </section>
@@ -63,11 +184,15 @@
   <div
     class="bg-gray-700c flex flex-col md:flex-row lg:mx-24 md:mx-14 sm:mx-6 m-4 md:gap-1"
   >
-    <h1 class="text-white w-auto tracking-wide text-5xl font-bold basis-2.5/5">
+    <h1
+      class="text-white w-auto tracking-wide font-bold basis-2.5/5 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+    >
       FROM DESIGN <br />
       TO IMPLEMENTATION
     </h1>
-    <p class="text-col2 tracking-wide ml-10 font-normal basis-auto mt-auto">
+    <p
+      class="text-col2 tracking-wide ml-10 font-normal basis-auto mt-auto text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+    >
       We provide complete support for our projects, <br />
       until their full implementation.
     </p>
@@ -79,13 +204,24 @@
     <div
       class="bg-yellow-900 rounded-3xl aspect-w-1 aspect-h-1 md:col-span-1 sm:col-span-2"
     >
-      <p class="text-col2 font-thin mx-20 mt-10">
+      <p
+        class="text-col2 font-thin mx-20 mt-10 ml-12 md:mt-20 md:ml-12 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         <strong>CHEMNEY</strong>
       </p>
-      <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
+      <h1
+        class="text-white mx-8 font-normal tracking-wider text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
+      >
         WOOD DESIGN
       </h1>
-      <h1 class="text-col2 mt-20 text-xl font-normal">SEE MORE</h1>
+      <div class="flex h-10 mt-5 md:mt-48">
+        <img class="w-6 h-6 ml-8" src="fleche.png" alt="" />
+        <h1
+          class="text-col2 font-normal pt-0 pl-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+        >
+          SEE MORE
+        </h1>
+      </div>
     </div>
     <div class="aspect-w-1 aspect-h-1">
       <img
@@ -105,14 +241,14 @@
   <div
     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 lg:px-20 py-6"
   >
-    <div class="aspect-w-1 aspect-h-1">
+    <div class="aspect-w-1 aspect-h-1 order-2 md:order-1">
       <img
         src="ethanol1.webp"
         class="rounded-3xl object-cover w-full h-full"
         alt="cheminée a bois"
       />
     </div>
-    <div class="aspect-w-1 aspect-h-1">
+    <div class="aspect-w-1 aspect-h-1 order-3 md:order-1">
       <img
         src="ethanol2.webp"
         class="rounded-3xl object-cover w-full h-full"
@@ -120,15 +256,24 @@
       />
     </div>
     <div
-      class="bg-yellow-900 rounded-3xl aspect-w-1 aspect-h-1 md:col-span-1 sm:col-span-2"
+      class="bg-yellow-900 rounded-3xl aspect-w-1 aspect-h-1 md:col-span-1 sm:col-span-2 order-1 md:order-3"
     >
-      <p class="text-col2 font-thin mx-20 mt-10">
+      <p
+        class="text-col2 font-thin mx-20 mt-10 ml-12 md:mt-20 md:ml-12 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         <strong>CHEMNEY</strong>
       </p>
       <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
         ETHANOL DESIGN
       </h1>
-      <h1 class="text-col2 mt-20 text-xl font-normal">SEE MORE</h1>
+      <div class="flex h-10 mt-5 md:mt-48">
+        <img class="w-6 h-6 ml-8" src="fleche.png" alt="" />
+        <h1
+          class="text-col2 font-normal pt-0 pl-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+        >
+          SEE MORE
+        </h1>
+      </div>
     </div>
   </div>
 
@@ -138,14 +283,23 @@
     <div
       class="bg-yellow-900 rounded-3xl aspect-w-1 aspect-h-1 md:col-span-1 sm:col-span-2"
     >
-      <p class="text-col2 font-thin mx-20 mt-10">
+      <p
+        class="text-col2 font-thin mx-20 mt-10 ml-12 md:mt-20 md:ml-12 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         <strong>CHEMNEY</strong>
       </p>
       <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
         STEAM <br />
         DESIGN
       </h1>
-      <h1 class="text-col2 mt-20 text-xl font-normal">SEE MORE</h1>
+      <div class="flex h-10 mt-5 md:mt-48">
+        <img class="w-6 h-6 ml-8" src="fleche.png" alt="" />
+        <h1
+          class="text-col2 font-normal pt-0 pl-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+        >
+          SEE MORE
+        </h1>
+      </div>
     </div>
     <div class="aspect-w-1 aspect-h-1">
       <img
@@ -166,14 +320,14 @@
   <div
     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 lg:px-20 py-6"
   >
-    <div class="aspect-w-1 aspect-h-1">
+    <div class="aspect-w-1 aspect-h-1 order-2 md:order-1">
       <img
         src="ethanol3.webp"
         class="rounded-3xl object-cover w-full h-full"
         alt="cheminée a bois"
       />
     </div>
-    <div class="aspect-w-1 aspect-h-1">
+    <div class="aspect-w-1 aspect-h-1 order-3 md:order-1">
       <img
         src="ethanol4.webp"
         class="rounded-3xl object-cover w-full h-full"
@@ -181,15 +335,24 @@
       />
     </div>
     <div
-      class="bg-yellow-900 rounded-3xl aspect-w-1 aspect-h-1 md:col-span-1 sm:col-span-2"
+      class="bg-yellow-900 rounded-3xl aspect-w-1 aspect-h-1 md:col-span-1 sm:col-span-2 order-1 md:order-3"
     >
-      <p class="text-col2 font-thin mx-20 mt-10">
+      <p
+        class="text-col2 font-thin mx-20 mt-10 ml-12 md:mt-20 md:ml-12 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         <strong>CHEMNEY</strong>
       </p>
       <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
         ETHANOL DESIGN
       </h1>
-      <h1 class="text-col2 mt-20 text-xl font-normal">SEE MORE</h1>
+      <div class="flex h-10 mt-5 md:mt-48">
+        <img class="w-6 h-6 ml-8" src="fleche.png" alt="" />
+        <h1
+          class="text-col2 font-normal pt-0 pl-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+        >
+          SEE MORE
+        </h1>
+      </div>
     </div>
   </div>
 </section>
@@ -210,14 +373,89 @@
   <div
     class="bg-gray-700c flex flex-col md:flex-row lg:mx-24 md:mx-14 sm:mx-6 m-4 md:gap-1"
   >
-    <h1 class="text-white w-auto tracking-wide text-5xl font-bold basis-3/5">
+    <h1
+      class="text-white w-auto tracking-wide font-bold basis-auto text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+    >
       WHY CHOOSE <br />
       ZAZA FIREPLACE
     </h1>
-    <p class="text-col2 tracking-wide ml-10 font-normal basis-auto mt-auto">
+    <p
+      class="text-col2 tracking-wide ml-10 ml:ml-0 font-normal basis-auto mt-auto text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+    >
       We deliver safe, adaptable, practical, reliable, and aesthetically <br />
       pleasing fireplaces throughout Morocco, tailored to your specific needs.
     </p>
+  </div>
+
+  <div>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 px-4 my-16 lg:px-20 py-2"
+    >
+      <div
+        class="rounded-xl my-5 aspect-w-1 aspect-h-1 flex flex-col justify-center"
+      >
+        <h1 class="text-col4 ml-5 text-3xl font-bold tracking-wider">300+</h1>
+        <p class="text-white lg:mx-8 text-xl font-normal">
+          <strong> Satisfied customers </strong>
+        </p>
+        <p class="text-white font-thin ml-5">
+          We strive to provide all our clients, both individuals and businesses,
+          with friendly and attentive service.
+        </p>
+      </div>
+      <div
+        class="rounded-xl my-5 aspect-w-1 aspect-h-1 flex flex-col justify-center"
+      >
+        <h1 class="text-col4 ml-5 text-3xl font-bold tracking-wider">50+</h1>
+        <p class="text-white lg:mx-8 text-xl font-normal">
+          <strong> Years of experience </strong>
+        </p>
+        <p class="text-white font-thin ml-5">
+          We are elders of estates with an ancient talent passed down from a
+          father to a son.
+        </p>
+      </div>
+      <div
+        class="rounded-xl my-5 aspect-w-1 aspect-h-1 flex flex-col justify-center"
+      >
+        <h1 class="text-col4 ml-5 text-3xl font-bold tracking-wider">600+</h1>
+        <p class="text-white lg:mx-8 text-xl font-normal">
+          <strong> Completed projects </strong>
+        </p>
+        <p class="text-white font-thin ml-5">
+          We are always striving for and achieving new milestones
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-white mx-5 ml:mx-20 tracking-widest">
+    <div class="flex flex-wrap py-8 px-4 pb-2 border-b-4 border-col4">
+      <p class="text-white text-xl font-normal w-48">GREEN FLAME :</p>
+      <p class="text-col2 font-thin ml-5">BECAUSE WE RESPECT THE ENVIRONMENT</p>
+    </div>
+    <div class="flex flex-wrap py-8 px-4 pb-2 border-b-4 border-col4">
+      <p class="text-white text-xl font-normal w-48">CRAFTSMANSHIP :</p>
+      <p class="text-col2 font-thin ml-5">A RECOGNIZED MOROCCAN PRODUCTION</p>
+    </div>
+    <div class="flex flex-wrap py-8 px-4 pb-2 border-b-4 border-col4">
+      <p class="text-white text-xl font-normal w-48">PERFORMANCE :</p>
+      <p class="text-col2 font-thin ml-5">
+        BECAUSE , IN ITS DUCTED VERSION , IT CAN HEAT AN ENTIRE HOME
+      </p>
+    </div>
+    <div class="flex flex-wrap py-8 px-4 pb-2 border-b-4 border-col4">
+      <p class="text-white text-xl font-normal w-48">CUSTOMIZATION :</p>
+      <p class="text-col2 font-thin ml-5">
+        BECAUSE WE CAN ALSO FIT INTO A PRE-EXISTING CHIMNEY
+      </p>
+    </div>
+    <div class="flex flex-wrap py-8 px-4 pb-2 border-b-4 border-col4">
+      <p class="text-white text-xl font-normal w-48">ADAPTABLE :</p>
+      <p class="text-col2 font-thin ml-5">
+        BECAUSE WE CAN ALSO FIT INTO A PRE-EXISTING CHIMNEY
+      </p>
+    </div>
   </div>
 </section>
 
@@ -231,31 +469,39 @@
 <!-- ///////////////////////////////////////////////*/ -->
 <!-- ///////////////////////////////////////////////*/ -->
 <!-- ///////////////////////////////////////////////*/ -->
-<section class="Process">
+<section class="Process mt-24">
   <div
     class="bg-gray-700c flex flex-col md:flex-row lg:mx-24 md:mx-14 sm:mx-6 m-4 md:gap-1"
   >
-    <h1 class="text-white w-auto tracking-wide text-5xl font-bold basis-2.5/5">
+    <h1
+      class="text-white w-auto tracking-wide font-bold basis-2.5/5 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+    >
       Supporting your projects, <br />
       Our approach :
     </h1>
   </div>
 
   <div
-    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-2"
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-10"
   >
     <div
-      class="bg-yellow-900 rounded-xl aspect-w-1 aspect-h-1 flex flex-col justify-center"
+      class="bg-yellow-900 rounded-xl aspect-w-1 py-5 ml:py-0 aspect-h-1 flex flex-col justify-center"
     >
-      <p class="text-col2 font-thin mx-20">
+      <p
+        class="text-col2 font-thin mx-20 text-base md:text-lg lg:text-xl xl:text-2xl"
+      >
         <strong>STEP 01</strong>
       </p>
-      <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
+      <h1
+        class="text-white mx-8 font-normal tracking-wider text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         ASK FOR YOUR QUOTE
       </h1>
       <p class="text-col2 font-thin mx-20">
         <strong>
-          <h1 class="text-col2 lg:mx-10 text-xl font-normal">
+          <h1
+            class="text-col2 mx-10 font-normal text-base md:text-lg lg:text-xl xl:text-xl"
+          >
             Filling out the form helps us get to know your project
           </h1>
         </strong>
@@ -270,9 +516,9 @@
     </div>
   </div>
   <div
-    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-2"
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-10"
   >
-    <div class="aspect-w-1 aspect-h-1">
+    <div class="aspect-w-1 aspect-h-1 order-2 md:order-1">
       <img
         src="demarche2.webp"
         class="rounded-lg object-cover w-full h-full"
@@ -280,17 +526,23 @@
       />
     </div>
     <div
-      class="bg-yellow-900 rounded-xl aspect-w-1 aspect-h-1 flex flex-col justify-center"
+      class="bg-yellow-900 rounded-xl aspect-w-1 aspect-h-1 flex flex-col justify-center order-1 md:order-2"
     >
-      <p class="text-col2 font-thin mx-20">
+      <p
+        class="text-col2 font-thin mx-20 text-base md:text-lg lg:text-xl xl:text-2xl"
+      >
         <strong>STEP 02</strong>
       </p>
-      <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
+      <h1
+        class="text-white mx-8 font-normal tracking-wider text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         CONSULTATION WITH EXPERTS
       </h1>
       <p class="text-col2 font-thin mx-20">
         <strong>
-          <h1 class="text-col2 lg:mx-10 text-xl font-normal">
+          <h1
+            class="text-col2 mx-10 font-normal text-base md:text-lg lg:text-xl xl:text-xl"
+          >
             We receive your quote request and discuss your project needs and
             objectives with you
           </h1>
@@ -300,20 +552,26 @@
   </div>
 
   <div
-    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-2"
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-10"
   >
     <div
       class="bg-yellow-900 rounded-xl aspect-w-1 aspect-h-1 flex flex-col justify-center"
     >
-      <p class="text-col2 font-thin mx-20">
+      <p
+        class="text-col2 font-thin mx-20 text-base md:text-lg lg:text-xl xl:text-2xl"
+      >
         <strong>STEP 03</strong>
       </p>
-      <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
+      <h1
+        class="text-white mx-8 font-normal tracking-wider text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         GET A FREE QUOTE
       </h1>
       <p class="text-col2 font-thin mx-20">
         <strong>
-          <h1 class="text-col2 lg:mx-10 text-xl font-normal">
+          <h1
+            class="text-col2 mx-10 font-normal text-base md:text-lg lg:text-xl xl:text-xl"
+          >
             The best quality at the best price.
           </h1>
         </strong>
@@ -329,9 +587,9 @@
   </div>
 
   <div
-    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-2"
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:px-20 py-10"
   >
-    <div class="aspect-w-1 aspect-h-1">
+    <div class="aspect-w-1 aspect-h-1 order-2 md:order-1">
       <img
         src="demarche4.webp"
         class="rounded-lg object-cover w-full h-full"
@@ -339,23 +597,52 @@
       />
     </div>
     <div
-      class="bg-yellow-900 rounded-xl aspect-w-1 aspect-h-1 flex flex-col justify-center"
+      class="bg-yellow-900 rounded-xl aspect-w-1 aspect-h-1 flex flex-col justify-center order- md:order-2"
     >
-      <p class="text-col2 font-thin mx-20">
+      <p
+        class="text-col2 font-thin mx-20 text-base md:text-lg lg:text-xl xl:text-2xl"
+      >
         <strong>STEP 04</strong>
       </p>
-      <h1 class="text-white mx-8 text-3xl font-normal tracking-wider">
+      <h1
+        class="text-white mx-8 font-normal tracking-wider text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         OPTIMAL INSTALLATION
       </h1>
       <p class="text-col2 font-thin mx-20">
         <strong>
-          <h1 class="text-col2 lg:mx-10 text-xl font-normal">
+          <h1
+            class="text-col2 mx-10 font-normal text-base md:text-lg lg:text-xl xl:text-xl"
+          >
             We provide our services to you in the manner and within the time
             required
           </h1>
         </strong>
       </p>
     </div>
+  </div>
+</section>
+<section
+  class="flex flex-col md:flex-row py-20 my-10 bg-white items-center justify-center"
+>
+  <div class="basis-1/2 md:ml-20 text-center md:text-left">
+    <p
+      class="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+    >
+      You need our help?
+    </p>
+    <p
+      class="tracking-wide text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+    >
+      Get a free Quote.
+    </p>
+  </div>
+  <div class="mt-4 md:mt-0">
+    <button
+      class="flex tracking-wide items-center bg-col2 text-col1 px-3 sm:px-4 md:px-6 lg:px-8 py-1 sm:py-2 md:py-3 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-col2-dark transition duration-300"
+    >
+      FREE CONSULTATION <span class="ml-2 font-bold">&rarr;</span>
+    </button>
   </div>
 </section>
 

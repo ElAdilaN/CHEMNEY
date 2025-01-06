@@ -17,6 +17,7 @@ module.exports = {
         col1: "#1A1A1A",
         col2: "#D9A16F",
         col3: "#1E1E1E",
+        col4: "#e0b999",
       },
     },
   },
